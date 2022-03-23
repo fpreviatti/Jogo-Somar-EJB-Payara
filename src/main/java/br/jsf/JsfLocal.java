@@ -35,16 +35,16 @@ public class JsfLocal {
     @EJB
     private EjbLocalLocal ejbLocal;
 
-    public JsfLocal() {
-        a = 1 + (int) (Math.random() * 100);
-        b = 1 + (int) (Math.random() * 100);
-    }
-    
     @Resource(lookup = "java:comp/DefaultJMSConnectionFactory")
     private ConnectionFactory connectionFactory;
     
     @Resource(lookup = "java/Fila")
     private Queue fila;
+    
+    public JsfLocal() {
+        a = 1 + (int) (Math.random() * 100);
+        b = 1 + (int) (Math.random() * 100);
+    }
     
     private String nome="";
     private static List<Competidor> lista = new ArrayList();
