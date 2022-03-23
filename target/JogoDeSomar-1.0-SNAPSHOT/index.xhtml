@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Jogo de Somar</title>
+    </h:head>
+    <h:body>
+
+        <h:form id = "formulario">
+
+            <h:outputText value="Nome:"/>
+            <h:inputText id = "nome" value="#{jsfLocal.nome}" required="true"/>
+            <br/>
+
+            <h:message for="nome" errorStyle="color:red; display:block"/>
+
+            <h:outputText value="Primeiro Número: "/>
+            <h:inputText value="#{jsfLocal.a}"/>
+
+            <br></br>
+
+            <h:outputText value="Segundo Número: "/>
+            <h:inputText value="#{jsfLocal.b}"/>
+
+            <br/>
+            <h:outputText value="Digite o Resultado da soma dos dois números:"/>
+            <h:inputText value="#{jsfLocal.resultado}"/>
+
+            <br></br>
+
+            <h:commandButton value="Enviar" disabled = "#{jsfLocal.jogoFinalizado}" action="#{jsfLocal.validarResultado()}">
+            </h:commandButton>
+
+            <h:commandButton value="Novo Jogo" action="#{jsfLocal.iniciarNovoJogo()}">
+            </h:commandButton>
+
+            <br></br>
+
+            <br></br>
+
+            ====== Ranking ======
+
+            <h:dataTable binding="#{jsfLocal.dataTable}" border="1"
+                         value="#{jsfLocal.lista}" var="lista">
+
+                <h:column>
+                    #{lista.nome}
+                </h:column>
+
+                <h:column>
+
+                    #{lista.pontuacao} acertos
+                </h:column>
+
+            </h:dataTable>
+
+
+        </h:form>
+
+    </h:body>
+</html>
+

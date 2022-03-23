@@ -1,0 +1,11 @@
+br\jsf\JsfLocal$SortByPontuacao.class
+br\ejb\EjbLocalLocal.class
+br\ejb\EjbLocalLocalStateful.class
+br\ejb\EjbLocalStateful.class
+br\entity\Competidor.class
+br\ejb\EjbConsumidor.class
+br\JakartaRestConfiguration.class
+br\jsf\JsfLocal.class
+br\ejb\EjbLocal.class
+br\resources\JakartaEE8Resource.class
+br\ejb\EjbLocalStateful$SortByPontuacao.class
